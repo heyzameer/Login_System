@@ -1,0 +1,16 @@
+<%- include('header') -%>
+
+
+
+<div class="home-container">
+    <div class="home-card">
+        <h2>Welcome to Home Page</h2>
+        <h3><%= locals.user ? locals.user : "User" %></h3>
+        <a href="/logout" class="btn-logout">Logout</a>
+    </div>
+</div>
+
+
+
+
+<%- include('footer') -%>

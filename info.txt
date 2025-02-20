@@ -1,0 +1,9 @@
+npm init -y
+
+
+npm i express nodemon ejs express-sesssion body-parser uuid
+
+
+npm start
+
+npm install nocache
