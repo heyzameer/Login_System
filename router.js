@@ -87,7 +87,7 @@ router.get("/", (req, res) => {
   if (req.session.isAuth) {
     return res.render("dashboard", { user: req.session.user, logout: "" });
   } else {
-    return res.render("base", { title: "Express", logout: "" });
+    return res.render("base", { title: "Login", logout: "" });
   }
 });
 
@@ -96,7 +96,7 @@ router.get("/login", (req, res) => {
   if (req.session.isAuth) {
     return res.render("dashboard", { user: req.session.user, logout: "" });
   } else {
-    return res.render("base", { title: "Express", logout: "" });
+    return res.render("base", { title: "Home", logout: "" });
   }
 });
 
@@ -104,7 +104,7 @@ router.get("/login", (req, res) => {
 router.get("/logout", (req, res) => {
   req.session.destroy(() => {
     // Clear session and show logout success message
-    return res.render("base", { title: "Express", logout: "Logout successfully" });
+    return res.render("base", { title: "Login", logout: "Logout successfully" });
   });
 });
 
