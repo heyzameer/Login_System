@@ -21,6 +21,9 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 // Serve assets from the "public/assets" directory
 app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
 
+app.use((req, res) => {
+    res.status(404).render("notFoundPage", { url: req.originalUrl });
+});
 // Start the server and listen on the defined port
 app.listen(port, () => {
   console.log(`Running.... http://localhost:${port}`); // Log the server URL
