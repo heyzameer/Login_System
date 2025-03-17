@@ -42,7 +42,7 @@ router.post("/login", (req, res) => {
   // Validate email format
   if (!emailRegex.test(email)) {
     return res.render("base", {
-      title: "Express",
+      title: "Express_Login_System",
       logout_err: "Invalid email format",
     });
   }
@@ -71,7 +71,7 @@ router.post("/login", (req, res) => {
   } else {
     // Invalid credentials, show error message
     return res.render("base", {
-      title: "Express",
+      title: "Express_Login_System",
       logout_err: "Invalid username or password",
     });
   }
